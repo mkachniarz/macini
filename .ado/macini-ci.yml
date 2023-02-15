@@ -1,6 +1,7 @@
 name: $[format('{0}-{1}', variables['Build.SourceBranchName'], counter(variables['Build.SourceBranchName']))]
 
-trigger: main
+trigger:
+  - main
 
 jobs:
   - template: 'jobs/build.job.yml'
